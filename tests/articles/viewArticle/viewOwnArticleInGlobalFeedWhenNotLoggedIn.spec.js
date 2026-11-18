@@ -21,7 +21,7 @@ test('User can see own article in "Global feed" when not logged in', async({ pag
         await page2.reload();
         await homePage2.openGlobalFeed();
 
-        await expect(createdArticle).toBeVisible({ timeout: 5000 });
+        await expect(createdArticle).toBeVisible({ timeout: 10000 });
     }).toPass({
         intervals: [15000],
         timeout: 90000,

@@ -13,8 +13,7 @@ export class EditArticlePage {
     this.articleDescr = page.getByPlaceholder("What's this article about?");
     this.articleText = page
     .getByPlaceholder('Write your article (in markdown)');
-    this.updateArticleButton = page.getByRole('button')
-    .filter({ name: 'Update Article'});
+    this.updateArticleButton = page.getByRole('button', { name: 'Update Article', exact : true});
   }
 
   async assertArticleTitle(title) {

@@ -7,10 +7,10 @@ export class HomePage {
     this.newArticleLink = page.getByRole('link', { name: 'New Article' });
     this.globalFeed = page.getByText('Global Feed');
     this.followAuthorButton = page.getByRole('button')
-    .filter({hasText : 'Follow'});
+    .filter({hasText : 'Follow', exact: true});
     this.homeButton = page.getByRole('link', { name: 'Home', exact: true });
     this.unfollowAuthorButton = page.getByRole('button')
-    .filter({ hasText : 'Unfollow'}).nth(0);
+    .filter({ hasText : 'Unfollow', exact: true}).nth(0);
     this.settingsButton = page.getByRole('link', { name : 'Settings'});
     this.newPasswordFiled = page.getByPlaceholder('New Password');
     this.updateSettingsButton = page.getByRole('button', { name : 'Update Settings'});

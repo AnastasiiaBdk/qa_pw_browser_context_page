@@ -5,9 +5,9 @@ export class ViewArticlePage {
     this.page = page;
     this.articleTitleHeader = page.getByRole('heading');
     this.followArticleButton = page.getByRole('button')
-    .filter({hasText: 'Favorite Article'}).nth(0);
+    .filter({hasText: 'Favorite Article', exact : true}).nth(0);
     this.unfollowArticleButton = page.getByRole('button')
-    .filter({hasText: 'UnFavorite Article'}).nth(0);
+    .filter({hasText: 'Unfavorite Article', exact : true}).nth(0);
     this.editArticleButton = page
     .getByRole('link', { name: 'Edit Article' }).nth(0);
   }
@@ -62,7 +62,7 @@ export class ViewArticlePage {
     })
   }
 
-  async assertfavoriteArticleIsVisible() {
+  async assertFavoriteArticleIsVisible() {
     await test.step(`'Favorite Article' button is visible`, async() => {
       await expect(this.followArticleButton).toBeVisible();
     });

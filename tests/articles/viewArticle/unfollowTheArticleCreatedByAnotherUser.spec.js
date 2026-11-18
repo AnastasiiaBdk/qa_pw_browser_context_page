@@ -21,5 +21,5 @@ test('User can unfollow the article created by another user', async({page2}) => 
     const viewArticlePage = new ViewArticlePage(page2);
 
     await viewArticlePage.unfollowArticle();
-    await viewArticlePage.assertfavoriteArticleIsVisible();
+    await viewArticlePage.assertFavoriteArticleIsVisible();
 })
