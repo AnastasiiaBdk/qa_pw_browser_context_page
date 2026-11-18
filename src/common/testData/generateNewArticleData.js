@@ -17,4 +17,19 @@ export function generateNewArticleData(logger, tagNumber = 0) {
   }
 
   return article;
-}
+};
+
+export function generateNewTitle() {
+  const newTitle = faker.lorem.sentence();
+  return newTitle;
+};
+
+export function generateNewDescr() {
+  const newDescr = faker.lorem.sentence();
+  return newDescr;
+};
+
+export function generateNewText() {
+  const newText = faker.lorem.paragraph();
+  return newText;
+};
