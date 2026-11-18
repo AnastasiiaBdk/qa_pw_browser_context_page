@@ -4,10 +4,8 @@ export class ViewArticlePage {
   constructor(page) {
     this.page = page;
     this.articleTitleHeader = page.getByRole('heading');
-    this.followArticleButton = page.getByRole('button')
-    .filter({hasText: 'Favorite Article', exact : true}).nth(0);
-    this.unfollowArticleButton = page.getByRole('button')
-    .filter({hasText: 'Unfavorite Article', exact : true}).nth(0);
+    this.followArticleButton = page.getByRole('button', {name: 'Favorite Article', exact : true}).nth(0);
+    this.unfollowArticleButton = page.getByRole('button', {name: 'Unfavorite Article', exact : true}).nth(0);
     this.editArticleButton = page
     .getByRole('link', { name: 'Edit Article' }).nth(0);
   }
